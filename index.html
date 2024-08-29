@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/style/style.css">
+    <title>Descobre Signo</title>
+</head>
+
+<body>
+    <div class="Navbar">
+        <div class="Navbar_Link Navbar_Link-brand">
+            JavaScript
+        </div>
+
+        <div class="Navbar_link Navbar_link_toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="Navbar_Items">
+            <div class="Nav_Link">Home</div>
+            <div class="Nav_Link">Projetos</div>
+            <div class="Nav_Link">Quem Somos</div>
+        </nav>
+
+        <nav class="Navbar_Items Navbar_Item--right">
+            <div class="Navbar_link">Perfil</div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1>Utilizando JavaScript</h1>
+        <label for="dataNascimento">Data de Nascimento</label>
+        <input type="date" id="dataNascimento">
+        <button id="btnVerificarSigno">Verificar</button>
+        <p id="resultado"></p>
+
+        <p>Escolha um item da lista para removê-lo ou adicione mais um item;</p>
+        <select name="itens" id="itens" size="6">
+            <option>Camiseta</option>
+            <option>Calça</option>
+            <option>Sapato</option>
+            <option>Bolsa</option>
+        </select>
+
+        <div class="btn-container">
+            <input type="button" value="Excluir item" id="btnExcluirItem">
+            <input type="button" value="Adicionar item" id="btnAdicionarItem">
+        </div>
+    </div>
+
+    <script src="./src/script/descobre_signo.js"></script>
+    <script src="./src/script/Add_excluir.js"></script>
+</body>
+
+</html>

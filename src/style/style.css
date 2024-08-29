@@ -1,0 +1,149 @@
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(60deg, #46ACC2, #f2f2f2);
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out; /*O corpo vai aparecer gradualmente de 1 segundo, com efeito suave*/
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {transform: translateY(20px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+.container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+}
+
+.container label {
+    font-weight: bold;
+    color: #333;
+}
+
+.container input[type='date'], button, select, input[type='button'] {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.container button, input[type='button'] {
+    background-color: #46ACC2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover, input[type='button']:hover {
+    background-color: #368BA1;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #46ACC2;
+    font-size: 18px;
+    text-align: center;
+}
+
+#itens {
+    margin-top: 10px;
+    width: calc(100% - 22px);
+    height: 150px;
+    font-size: 16px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.Navbar {
+    background-color: #46ACC2;
+    display: flex;
+    padding: 16px;
+    font-family: sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative; /* Para que o ícone do menu possa ser posicionado relativamente */
+}
+
+.Navbar_Link {
+    font-size: 24px;
+    padding-right: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.Navbar_Link:hover {
+    color: #ddd;
+}
+
+.Navbar_Items {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; /* Espaçamento entre os itens do menu */
+}
+
+.Nav_Link {
+    padding-left: 1rem;
+}
+
+.Nav_Link:hover {
+    color: #ddd;
+}
+
+.Navbar_Item--right {
+    padding-left: 1rem;
+}
+
+.Navbar_link_toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 16px; 
+    top: 16px; 
+    z-index: 1000; 
+}
+
+@media only screen and (max-width: 768px) {
+    .Navbar_Items {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .Navbar_link_toggle {
+        display: block;
+    }   
+
+    .Navbar_ToggleShow {
+        display: flex; 
+    }
+}
